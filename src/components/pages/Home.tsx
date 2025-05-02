@@ -54,7 +54,7 @@ interface HomePageProps {
       title: string;
       subtitle: string;
     };
-  };
+  } | any;
 }
 
 function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {

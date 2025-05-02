@@ -58,7 +58,7 @@ const ClientLogos: React.FC<ClientLogosProps> = ({ locale = 'ar', dictionary = {
           <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
         </div>
         
-        <div className="relative">
+        <div className="relative overflow-hidden">
           {/* Single Slider */}
           <motion.div
             className="flex space-x-8 rtl:space-x-reverse"
