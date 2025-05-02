@@ -1,0 +1,161 @@
+'use client';
+
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
+import CTAButton from '@/components/CTAButton';
+import { Locale } from '@/i18n.config';
+import { getServiceById } from '@/data/services';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+interface ServiceDetailsPageProps {
+  locale: Locale;
+  id: string;
+  dictionary?: any;
+}
+
+const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', id, dictionary = {} }) => {
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const service = getServiceById(id);
+
+  if (!service) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Service not found</h2>
+          <button
+            onClick={() => router.push(`/${locale}/services`)}
+            className="text-primary hover:text-primary/80"
+          >
+            Return to Services
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const title = locale === 'ar' ? service.titleAr : service.title;
+  const description = locale === 'ar' ? service.descriptionAr : service.description;
+  const features = locale === 'ar' ? service.featuresAr : service.features;
+
+  return (
+    <div className="pt-28 pb-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <button
+          onClick={() => router.back()}
+          className="flex items-center space-x-2 rtl:space-x-reverse text-primary hover:text-primary/80 mb-6"
+        >
+          <ArrowLeft size={20} />
+          <span>Back to Services</span>
+        </button>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative h-[400px] rounded-xl overflow-hidden mb-8 cursor-pointer"
+          onClick={() => {
+            setPhotoIndex(0);
+            setIsOpen(true);
+          }}
+        >
+          <img
+            src={service.image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="text-4xl font-bold text-white">{title}</h1>
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Overview</h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">{description}</p>
+
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Features</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-2 rtl:space-x-reverse"
+                  >
+                    <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span className="text-gray-600">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Gallery</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {service.gallery.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="rounded-lg overflow-hidden cursor-pointer group"
+                    onClick={() => {
+                      setPhotoIndex(index);
+                      setIsOpen(true);
+                    }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={image}
+                        alt={`${title} gallery image ${index + 1}`}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <Lightbox
+                open={isOpen}
+                close={() => setIsOpen(false)}
+                index={photoIndex}
+                slides={[service.image, ...service.gallery].map(src => ({ src }))}
+              />
+            </motion.div>
+          </div>
+
+          <div className="lg:col-span-1">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-gray-50 rounded-xl p-6 sticky top-24"
+            >
+              <h3 className="text-xl font-bold text-gray-800 mb-6">
+                Request Information
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Interested in this service? Contact us for more information or a custom quote.
+              </p>
+              <CTAButton
+                text="Contact Us"
+                to="/contact"
+                locale={locale}
+                className="w-full justify-center"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ServiceDetailsPage;

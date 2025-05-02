@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_rsc_src_dictionaries_ar_json";
+exports.ids = ["_rsc_src_dictionaries_ar_json"];
+exports.modules = {
+
+/***/ "(rsc)/./src/dictionaries/ar.json":
+/*!**********************************!*\
+  !*** ./src/dictionaries/ar.json ***!
+  \**********************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"navigation":{"siteName":"الكرفانات والمباني المتنقلة","home":"الرئيسية","about":"من نحن","services":"خدماتنا","projects":"مشاريعنا","blog":"المدونة","contact":"اتصل بنا"},"hero":{"title":"حلول الكرفانات والمباني المتنقلة بمعايير عالمية","subtitle":"خبرة تمتد لأكثر من 10 سنوات في تقديم أفضل الحلول المبتكرة للكرفانات والمباني سابقة التجهيز والحاويات المعدلة","cta":"اطلب استشارة مجانية"},"features":{"feature1":"كرفانات جديدة ومستعملة","feature2":"غرف تبريد وتجميد","feature3":"كبائن أمن وحمامات متنقلة","feature4":"حاويات تخزين مخصصة"},"quality":{"title":"جودة – التزام – ابتكار","since":"2016"},"about":{"title":"من نحن","brief":"الشركة الرائدة في حلول المباني المتنقلة","description":"تأسست شركتنا في عام 2016، ونمت لتصبح واحدة من أكثر مزودي حلول المباني المتنقلة موثوقية في المنطقة. جعل التزامنا بالجودة والابتكار ورضا العملاء منا الخيار المفضل للشركات والمؤسسات في مختلف القطاعات.","vision":{"title":"رؤيتنا","text":"أن نكون الشركة الرائدة في مجال حلول المباني المتنقلة، ونضع معايير جديدة للجودة والاستدامة في الصناعة."},"mission":{"title":"مهمتنا","text":"تقديم حلول مباني متنقلة استثنائية تتجاوز توقعات عملائنا من خلال الابتكار والحرفية عالية الجودة والخدمة المتميزة."},"values":{"title":"قيمنا","text":"الجودة، الابتكار، النزاهة، التركيز على العملاء"},"timeline":{"2016":{"title":"تأسيس الشركة","description":"تأسست برؤية لإحداث ثورة في صناعة المباني المتنقلة"},"2018":{"title":"التوسع في السوق","description":"توسيع الخدمات لتشمل حلول التخزين المبرد والحاويات المخصصة"},"2021":{"title":"دمج التكنولوجيا","description":"اعتماد تكنولوجيا CAD/CAM المتقدمة للتصنيع الدقيق"},"2024":{"title":"قائد إقليمي","description":"أصبحت واحدة من الشركات الرائدة في المنطقة في مجال حلول المباني المتنقلة"},"title":"مسيرتنا"}},"clients":{"title":"عملاؤنا","subtitle":"نفخر بثقة عملائنا وشراكتنا مع أكبر الشركات والمؤسسات في المنطقة"},"services":{"title":"خدماتنا","subtitle":"نقدم مجموعة شاملة من الحلول المبتكرة لتلبية احتياجاتكم","viewAll":"عرض جميع الخدمات"},"projects":{"title":"مشاريعنا","subtitle":"اكتشف مشاريعنا الناجحة وكيف ساعدنا عملائنا في تحقيق أهدافهم","viewAll":"عرض جميع المشاريع"},"blog":{"title":"أحدث الأخبار والمقالات","subtitle":"ابق على اطلاع بآخر الأخبار والمقالات في مجال الكرفانات والمباني المتنقلة","viewAll":"عرض جميع المقالات"},"contact":{"title":"اتصل بنا","subtitle":"نحن هنا لمساعدتك! تواصل معنا اليوم للحصول على استشارة مجانية أو عرض سعر مصمم خصيصًا لاحتياجاتك","phone":"الهاتف","email":"البريد الإلكتروني","address":"العنوان","form":{"name":"الاسم الكامل","email":"البريد الإلكتروني","phone":"رقم الهاتف","message":"رسالتك","submit":"إرسال"}},"footer":{"company_info":"معلومات الشركة","quick_links":"روابط سريعة","our_services":"خدماتنا","contact_us":"اتصل بنا","copyright":"© 2024 الكرفانات والمباني المتنقلة. جميع الحقوق محفوظة"}}');
+
+/***/ })
+
+};
+;

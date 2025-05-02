@@ -1,0 +1,68 @@
+{
+  "siteName": "Caravans & Mobile Buildings",
+  "home": "Home",
+  "about": "About Us",
+  "services": "Services",
+  "contact": "Contact Us",
+  
+  "hero": {
+    "title": "World-Class Caravans & Mobile Building Solutions",
+    "subtitle": "Over 10 years of experience delivering the best innovative solutions for caravans, prefabricated buildings, and customized containers.",
+    "cta": "Request a Free Consultation"
+  },
+  
+  "features": {
+    "feature1": "New and Used Caravans",
+    "feature2": "Cold Storage Rooms",
+    "feature3": "Security Booths and Mobile Bathrooms",
+    "feature4": "Customized Storage Containers"
+  },
+  
+  "quality": "Quality – Commitment – Innovation",
+  
+  "aboutSection": {
+    "title": "About Us",
+    "description": "Established in 2016 with the goal of delivering mobile solutions that meet the highest standards of quality and innovation. We rely on cutting-edge manufacturing technologies (CAD / CAE / CAM) to deliver strong, efficient, and client-ready products across various sectors.",
+    "vision": "Our Vision",
+    "visionText": "To lead the future of smart mobile solutions.",
+    "mission": "Our Mission",
+    "missionText": "To design and deliver innovative solutions that exceed customer expectations.",
+    "values": "Our Values",
+    "valuesText": "Quality | Commitment | Innovation"
+  },
+  
+  "servicesSection": {
+    "title": "Our Services",
+    "service1": "New Caravans",
+    "service2": "Used Caravans",
+    "service3": "Prefabricated Buildings",
+    "service4": "Customized Storage Containers",
+    "service5": "Cold Rooms & Freezers",
+    "service6": "Security Booths and Mobile Cabins",
+    "service7": "Portable Bathrooms",
+    "service8": "Custom Storage Shelves",
+    "service9": "Transportation and Installation Services"
+  },
+  
+  "contactSection": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help! Contact us today for a free consultation or a customized quote tailored to your needs.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message"
+    },
+    "formPrompt": "Or fill out the quick form, and we'll get back to you shortly!"
+  },
+  
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "copyright": "© 2025 Caravans & Mobile Buildings. All rights reserved."
+  }
+}
