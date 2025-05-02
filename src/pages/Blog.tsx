@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
@@ -53,28 +53,30 @@ const Blog: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
-              <Link to={`/blog/${post.id}`}>
-                <div className="relative h-48">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                    <time className="text-white text-sm">{post.date}</time>
+              <Link href={`/blog/${post.id}`} passHref>
+                <a>
+                  <div className="relative h-48">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                      <time className="text-white text-sm">{post.date}</time>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="text-primary font-medium hover:text-primary/80">
-                    Read More →
+                  <div className="p-6">
+                    <h2 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="text-primary font-medium hover:text-primary/80">
+                      Read More →
+                    </div>
                   </div>
-                </div>
+                </a>
               </Link>
             </motion.article>
           ))}
