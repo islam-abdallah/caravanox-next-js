@@ -87,32 +87,31 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
       <section className="relative h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="relative w-full h-full">
-            <Image
+            <Image 
               src="/images/hero.jpg"
               alt="Prefabricated building"
-              width={1920}
-              height={1080}
+              fill
               className="object-cover"
-              priority
-              placeholder="blur"
+              
             />
             <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           </div>
         </div>
-
+        
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center">
+            className="max-w-3xl mx-auto text-center"
+          >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {hero.title}
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
               {hero.subtitle}
             </p>
-            <CTAButton
+            <CTAButton 
               text={hero.cta}
               to="/contact"
               locale={locale}
@@ -131,7 +130,7 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Feature 1 */}
             <motion.div
@@ -139,79 +138,71 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
               <div className="flex items-start space-x-3 rtl:space-x-reverse">
                 <CheckCircle2 className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-lg font-medium text-gray-800">
-                  {features.feature1}
-                </p>
+                <p className="text-lg font-medium text-gray-800">{features.feature1}</p>
               </div>
             </motion.div>
-
+            
             {/* Feature 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
               <div className="flex items-start space-x-3 rtl:space-x-reverse">
                 <CheckCircle2 className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-lg font-medium text-gray-800">
-                  {features.feature2}
-                </p>
+                <p className="text-lg font-medium text-gray-800">{features.feature2}</p>
               </div>
             </motion.div>
-
+            
             {/* Feature 3 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
               <div className="flex items-start space-x-3 rtl:space-x-reverse">
                 <CheckCircle2 className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-lg font-medium text-gray-800">
-                  {features.feature3}
-                </p>
+                <p className="text-lg font-medium text-gray-800">{features.feature3}</p>
               </div>
             </motion.div>
-
+            
             {/* Feature 4 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
               <div className="flex items-start space-x-3 rtl:space-x-reverse">
                 <CheckCircle2 className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-lg font-medium text-gray-800">
-                  {features.feature4}
-                </p>
+                <p className="text-lg font-medium text-gray-800">{features.feature4}</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-
+      
       {/* Featured Services */}
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {services.title}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {services.subtitle}
-            </p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">{services.title}</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{services.subtitle}</p>
             <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
-              <ServiceCard
+              <ServiceCard 
                 key={service.id}
                 {...service}
                 delay={index}
@@ -219,9 +210,9 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
               />
             ))}
           </div>
-
+          
           <div className="text-center mt-12">
-            <CTAButton
+            <CTAButton 
               text={services.viewAll}
               to="/services"
               locale={locale}
@@ -235,18 +226,14 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {projects.title}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {projects.subtitle}
-            </p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">{projects.title}</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{projects.subtitle}</p>
             <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProjects.map((project, index) => (
-              <ProjectCard
+              <ProjectCard 
                 key={project.id}
                 {...project}
                 delay={index}
@@ -256,7 +243,7 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
           </div>
 
           <div className="text-center mt-12">
-            <CTAButton
+            <CTAButton 
               text={projects.viewAll}
               to="/projects"
               locale={locale}
@@ -270,23 +257,24 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {blog.title}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {blog.subtitle}
-            </p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">{blog.title}</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{blog.subtitle}</p>
             <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredBlogs.map((post, index) => (
-              <BlogCard key={post.id} {...post} locale={locale} delay={index} />
+              <BlogCard 
+                key={post.id}
+                {...post}
+                locale={locale}
+                delay={index}
+              />
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <CTAButton
+            <CTAButton 
               text={blog.viewAll}
               to="/blog"
               locale={locale}
@@ -298,13 +286,13 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
 
       {/* Client Logos Section */}
       <ClientLogos locale={locale} dictionary={dictionary} />
-
+      
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">{contact.title}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">{contact.subtitle}</p>
-          <CTAButton
+          <CTAButton 
             text={hero.cta}
             to="/contact"
             locale={locale}
