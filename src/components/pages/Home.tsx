@@ -88,7 +88,7 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
         <div className="absolute inset-0 z-0">
           <div className="relative w-full h-full">
             <Image 
-              src="https://images.pexels.com/photos/1639013/pexels-photo-1639013.jpeg"
+              src="/images/hero.jpg"
               alt="Prefabricated building"
               fill
               className="object-cover"
@@ -115,7 +115,7 @@ function HomePage({ locale = 'ar', dictionary = {} }: HomePageProps) {
               text={hero.cta}
               to="/contact"
               locale={locale}
-              className="text-lg"
+              className="text-lg "
             />
           </motion.div>
         </div>

@@ -7,7 +7,7 @@ export const services = {
     titleAr: 'كرفانات جديدة',
     description: 'Modern, customizable caravans built to the highest standards of quality and comfort.',
     descriptionAr: 'كرفانات حديثة قابلة للتخصيص مبنية وفقًا لأعلى معايير الجودة والراحة.',
-    image: 'https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg',
+    image: '/images/service.jpg',
     features: [
       'Custom interior layouts',
       'High-quality materials',

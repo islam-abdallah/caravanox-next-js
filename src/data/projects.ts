@@ -5,6 +5,8 @@ export const projects: Record<string, ProjectType> = {
     id: 'beach-resort',
     title: 'Beach Resort Cabins',
     titleAr: 'كبائن منتجع الشاطئ',
+    description: 'Custom designed prefabricated cabins for a luxury beach resort. The units were designed to withstand coastal weather conditions while providing comfort and style.',
+    descriptionAr: 'كبائن مسبقة الصنع مصممة خصيصًا لمنتجع شاطئي فاخر. تم تصميم الوحدات لتتحمل الظروف الجوية الساحلية مع توفير الراحة والأناقة.',
     category: 'Prefabricated Buildings',
     categoryAr: 'مباني مسبقة الصنع',
     client: 'Coastal Resorts Ltd.',
@@ -12,8 +14,6 @@ export const projects: Record<string, ProjectType> = {
     date: '2024',
     location: 'Red Sea Coast, Egypt',
     locationAr: 'ساحل البحر الأحمر، مصر',
-    description: 'Custom designed prefabricated cabins for a luxury beach resort. The units were designed to withstand coastal weather conditions while providing comfort and style.',
-    descriptionAr: 'كبائن مسبقة الصنع مصممة خصيصًا لمنتجع شاطئي فاخر. تم تصميم الوحدات لتتحمل الظروف الجوية الساحلية مع توفير الراحة والأناقة.',
     image: 'https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg',
     gallery: [
       'https://images.pexels.com/photos/2449450/pexels-photo-2449450.jpeg',

@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale = 'ar', navigation = {} }) => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={`/${locale}`} className="text-2xl font-bold text-primary">
-            Logo
+            <img src="/images/logo.png" alt="Logo" className="h-20" />
           </Link>
 
           {/* Desktop Navigation */}

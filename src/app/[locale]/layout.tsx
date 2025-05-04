@@ -39,7 +39,7 @@ export default async function RootLayout(props: {
 
   return (
     <html
-      suppressHydrationWarning
+    
       lang={locale}
       className={`${poppins.variable} ${cairo.variable}`}
       dir={isRTL ? "rtl" : "ltr"}>
@@ -56,5 +56,6 @@ export default async function RootLayout(props: {
         />
       </body>
     </html>
+    
   );
 }

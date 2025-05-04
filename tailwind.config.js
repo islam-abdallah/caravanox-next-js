@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0056A3',
-        accent: '#FFD700',
+        primary: '#165f9b',
+        accent: '#FFC80D',
       },
       fontFamily: {
-        cairo: ['var(--font-cairo)'],
-        poppins: ['var(--font-poppins)'],
+        cairo: ['"Cairo"', 'sans-serif'],
+        poppins: ['"Poppins"', 'sans-serif'],
       },
       container: {
         center: true,

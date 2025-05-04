@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-poppins: '';
-  --font-cairo: '';
+  --font-poppins: '"Poppins"';
+  --font-cairo: '"Cairo"';
 }
 
 /* RTL Support */

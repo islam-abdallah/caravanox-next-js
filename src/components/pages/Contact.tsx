@@ -18,7 +18,10 @@ interface ContactPageProps {
   };
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ dictionary }) => {
+const ContactPage: React.FC<ContactPageProps> = ({
+  locale = "ar",
+  dictionary,
+}) => {
   const { contact } = dictionary;
 
   return (
@@ -62,7 +65,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ dictionary }) => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">
                       {contact.phone}
                     </h3>
-                    <p className="text-gray-600">+20 123 456 7890</p>
+                    <p className="text-gray-600">01019319133</p>
                   </div>
                 </div>
 
@@ -75,7 +78,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ dictionary }) => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">
                       {contact.email}
                     </h3>
-                    <p className="text-gray-600">info@caravans-mobile.com</p>
+                    <p className="text-gray-600"> info@caravanox.com</p>
                   </div>
                 </div>
 
@@ -89,19 +92,33 @@ const ContactPage: React.FC<ContactPageProps> = ({ dictionary }) => {
                       {contact.address}
                     </h3>
                     <p className="text-gray-600">
-                      Abu Rawash Industrial Area, Egypt
+                      {locale === "ar"
+                        ? "تقاطع محور الضبعة مع ك 28 طريق مصر اسكندرية الصحراوي – المنطقة الصناعية أبو رواش – الجيزة – مصر"
+                        : "Intersection of El Dabaa Axis with km 28 Cairo-Alexandria Desert Road – Abu Rawash Industrial Area – Giza – Egypt"}
                     </p>
                   </div>
                 </div>
               </div>
-
+            </motion.div>
+            <motion.div>
               {/* Map Image */}
-              <div className="mt-8 rounded-lg overflow-hidden border border-gray-200 h-64">
-                <img
-                  src="https://images.pexels.com/photos/4386158/pexels-photo-4386158.jpeg"
-                  alt="Location Map"
-                  className="w-full h-full object-cover"
-                />
+              <p className="text-2xl font-bold text-gray-800 ">
+                {locale === "ar"
+                  ? "موقعنا ع الخريطة"
+                  : "Our Location on the Map"}
+              </p>
+              <div className="mt-16 rounded-lg overflow-hidden border border-gray-200 h-64">
+                <a
+                  href="https://maps.app.goo.gl/z5j9T1LykD5shiti7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View on Google Maps">
+                  <img
+                    src="/images/map.png"
+                    alt="Location Map"
+                    className="w-full h-full object-cover"
+                  />
+                </a>
               </div>
             </motion.div>
           </div>

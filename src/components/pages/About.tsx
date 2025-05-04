@@ -41,9 +41,9 @@ const AboutPage: React.FC<AboutPageProps> = ({ locale = 'ar', dictionary }) => {
       <section className="relative pt-28 pb-32 bg-gray-50">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.pexels.com/photos/3764594/pexels-photo-3764594.jpeg" 
+            src="/images/about-us.png" 
             alt="About our company" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-full"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
