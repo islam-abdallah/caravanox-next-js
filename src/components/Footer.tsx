@@ -181,9 +181,9 @@ const Footer: React.FC<FooterProps> = ({
                 <Mail size={18} className="text-accent flex-shrink-0" />
                 <span>
                   <a
-                    href="mailto:info@caravanox.com"
+                    href="mailto:sales@caravanox.com"
                     className="hover:text-accent hover:underline">
-                    info@caravanox.com
+                    sales@caravanox.com
                   </a>
                 </span>
               </li>

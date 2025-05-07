@@ -20,35 +20,29 @@ const TopHeader: React.FC<TopHeaderProps> = ({ locale }) => {
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <Mail size={16} />
             <a
-              href={`mailto:${"info@caravans-mobile.com"}`}
+              href={`mailto:${"sales@caravanox.com"}`}
               className="text-sm hover:text-primary transition-colors">
-              {"info@caravans-mobile.com"}
+              {"sales@caravanox.com"}
             </a>
           </div>
 
           {/* Social Icons */}
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
             <a
-              href="#"
-              className="hover:text-primary transition-colors"
+              href="https://www.facebook.com/Caravanox"
+              className="hover:text-accent transition-colors"
               aria-label="Facebook">
               <Facebook size={16} />
             </a>
             <a
               href="#"
-              className="hover:text-primary transition-colors"
-              aria-label="Twitter">
-              <Twitter size={16} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-primary transition-colors"
+              className="hover:text-accent transition-colors"
               aria-label="Instagram">
               <Instagram size={16} />
             </a>
             <a
-              href="#"
-              className="hover:text-primary transition-colors"
+              href="https://www.linkedin.com/in/%D9%83%D8%B1%D9%81%D8%A7%D9%86-%D8%A7%D9%88%D9%83%D8%B3-caravanox-a97b11222/"
+              className="hover:text-accent transition-colors"
               aria-label="LinkedIn">
               <Linkedin size={16} />
             </a>

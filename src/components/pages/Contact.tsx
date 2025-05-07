@@ -78,7 +78,7 @@ const ContactPage: React.FC<ContactPageProps> = ({
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">
                       {contact.email}
                     </h3>
-                    <p className="text-gray-600"> info@caravanox.com</p>
+                    <p className="text-gray-600"> sales@caravanox.com</p>
                   </div>
                 </div>
 
