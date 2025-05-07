@@ -3,7 +3,7 @@
     "siteName": "Caravans & Mobile Buildings",
     "home": "Home",
     "about": "About",
-    "services": "Services",
+    "products": "Products",
     "projects": "Projects",
     "blog": "Blog",
     "contact": "Contact"
@@ -64,11 +64,11 @@
     "subtitle": "We take pride in our clients' trust and partnerships with major corporations in the region"
   },
   "services": {
-    "title": "Our Services",
+    "title": "Our Products",
     "subtitle": "We provide a comprehensive range of innovative solutions to meet your needs",
-    "viewAll": "View All Services",
+    "viewAll": "View All Products",
     "messageWatsApp": "Hello, I am interested in your service",
-    "returnToServices": "Return to Services",
+    "returnToServices": "Return to Products",
     "serviceNotFound": "Service not found",
     "requestInformation": "Request Information",
     "interestedQuote":" Interested in this service? Contact us for more information or a custom quote"
@@ -100,7 +100,7 @@
   "footer": {
     "company_info": "Company Info",
     "quick_links": "Quick Links",
-    "our_services": "Our Services",
+    "our_services": "Our Products",
     "contact_us": "Contact Us",
     "copyright": "© 2024 Caravans & Mobile Buildings. All rights reserved"
   }

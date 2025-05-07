@@ -34,7 +34,7 @@ const Services: React.FC<ServicesPageProps> = ({
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-800 mb-6">
-              {locale === "ar" ? "خدماتنا" : "Our Services"}
+              {locale === "ar" ? "منتجاتنا" : "Our Products"}
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -73,27 +73,27 @@ const Services: React.FC<ServicesPageProps> = ({
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
           {/* <AnimatePresence mode="wait"> */}
-            <motion.div
-              key={selectedCategory}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
-                <ServiceCard
-                  key={service.id}
-                  {...service}
-                  delay={index}
-                  locale={locale}
-                />
-              ))}
-            </motion.div>
+          <motion.div
+            key={selectedCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <ServiceCard
+                key={service.id}
+                {...service}
+                description={service.description || ""}
+                descriptionAr={service.descriptionAr || ""}
+                delay={index}
+                locale={locale}
+              />
+            ))}
+          </motion.div>
           {/* </AnimatePresence> */}
         </div>
       </section>
-
-   
     </>
   );
 };

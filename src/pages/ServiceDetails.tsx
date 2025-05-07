@@ -37,10 +37,9 @@ const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', 
             {locale === "ar" ? "الخدمة غير موجودة" : "Service Not Found"}
           </h2>
           <button
-            onClick={() => router.push(`/${locale}/services`)}
-            className="text-primary hover:text-primary/80"
-          >
-            {t('services.returnToServices')}
+            onClick={() => router.push(`/${locale}/products`)}
+            className="text-primary hover:text-primary/80">
+            {t("services.returnToServices")}
           </button>
         </div>
       </div>
@@ -59,7 +58,7 @@ const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', 
           className="flex items-center space-x-2 rtl:space-x-reverse text-primary hover:text-primary/80 mb-6">
           {locale === "ar" ? <ArrowRight size={20} /> : <ArrowLeft size={20} />}
           <span>
-            {locale === "ar" ? "العودة للخدمات" : "Return to Services"}
+            {locale === "ar" ? "العودة للمنتجات" : "Return to Products"}
           </span>
         </button>
 
@@ -163,71 +162,75 @@ const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', 
             {/* Related Projects Section */}
             {relatedProjects.length > 0 && (
               <div className="mt-16">
-              <h2 className="text-2xl font-bold text-gray-800 mb-8">
-                {locale === "ar" ? "مشاريع ذات صلة" : "Related Projects"}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {relatedProjects.slice(0, 2).map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <div
-                  onClick={() => router.push(`/projects/${project.id}`)}
-                  className="cursor-pointer">
-                  <div className="relative h-48">
-                    <img
-                    src={project.image}
-                    alt={
-                      locale === "ar" ? project.titleAr : project.title
-                    }
-                    className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                    <span className="inline-block px-3 py-1 bg-primary/90 text-white text-sm rounded-full mb-2">
-                      {locale === "ar"
-                      ? project.categoryAr
-                      : project.category}
-                    </span>
-                    <h3 className="text-lg font-bold text-white line-clamp-1">
-                      {locale === "ar"
-                      ? project.titleAr
-                      : project.title}
-                    </h3>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-center justify-between text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <Users size={16} className="mr-1 rtl:ml-1" />
-                      <span className="line-clamp-1">
-                      {locale === "ar"
-                        ? project.clientAr
-                        : project.client}
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar size={16} className="mr-1 rtl:ml-1" />
-                      <span>{project.date}</span>
-                    </div>
-                    </div>
-                  </div>
-                  </div>
-                </motion.div>
-                ))}
-              </div>
+                <h2 className="text-2xl font-bold text-gray-800 mb-8">
+                  {locale === "ar" ? "مشاريع ذات صلة" : "Related Projects"}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {relatedProjects.slice(0, 2).map((project, index) => (
+                    <motion.div
+                      key={project.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                      <div
+                        onClick={() => router.push(`/projects/${project.id}`)}
+                        className="cursor-pointer">
+                        <div className="relative h-48">
+                          <img
+                            src={project.image}
+                            alt={
+                              locale === "ar" ? project.titleAr : project.title
+                            }
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                          <div className="absolute bottom-4 left-4 right-4">
+                            <span className="inline-block px-3 py-1 bg-primary/90 text-white text-sm rounded-full mb-2">
+                              {locale === "ar"
+                                ? project.categoryAr
+                                : project.category}
+                            </span>
+                            <h3 className="text-lg font-bold text-white line-clamp-1">
+                              {locale === "ar"
+                                ? project.titleAr
+                                : project.title}
+                            </h3>
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <div className="flex items-center justify-between text-sm text-gray-600">
+                            <div className="flex items-center">
+                              <Users size={16} className="mr-1 rtl:ml-1" />
+                              <span className="line-clamp-1">
+                                {locale === "ar"
+                                  ? project.clientAr
+                                  : project.client}
+                              </span>
+                            </div>
+                            <div className="flex items-center">
+                              <Calendar size={16} className="mr-1 rtl:ml-1" />
+                              <span>{project.date}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
 
-              <div className="text-center mt-8">
-                <CTAButton
-                text={locale === "ar" ? "عرض جميع المشاريع" : "View All Projects"}
-                to="/projects"
-                locale={locale as "en" | "ar"}
-                primary={false}
-                />
-              </div>
+                <div className="text-center mt-8">
+                  <CTAButton
+                    text={
+                      locale === "ar"
+                        ? "عرض جميع المشاريع"
+                        : "View All Projects"
+                    }
+                    to="/projects"
+                    locale={locale as "en" | "ar"}
+                    primary={false}
+                  />
+                </div>
               </div>
             )}
           </div>

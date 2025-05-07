@@ -90,9 +90,9 @@ const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <Link
-                  href={`/${locale}/services`}
+                  href={`/${locale}/products`}
                   className="text-gray-400 hover:text-accent transition-colors">
-                  {navigation?.services || "Services"}
+                  {navigation?.services || "products"}
                 </Link>
               </li>
               <li>
@@ -115,33 +115,33 @@ const Footer: React.FC<FooterProps> = ({
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6">
-              {footer?.our_services || "Our Services"}
+              {footer?.our_services || "Our Products"}
             </h3>
             <ul className="space-y-4">
               <li>
                 <Link
-                  href={`/${locale}/services/prefab`}
+                  href={`/${locale}/products/products`}
                   className="text-gray-400 hover:text-accent transition-colors">
                   Prefabricated Buildings
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/${locale}/services/cold-rooms`}
+                  href={`/${locale}/products/cold-rooms`}
                   className="text-gray-400 hover:text-accent transition-colors">
                   Cold Rooms
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/${locale}/services/mobile-offices`}
+                  href={`/${locale}/products/mobile-offices`}
                   className="text-gray-400 hover:text-accent transition-colors">
                   Mobile Offices
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/${locale}/services/security`}
+                  href={`/${locale}/products/security`}
                   className="text-gray-400 hover:text-accent transition-colors">
                   Security Booths
                 </Link>

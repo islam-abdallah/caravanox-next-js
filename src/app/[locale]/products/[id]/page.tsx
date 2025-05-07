@@ -17,7 +17,7 @@ export async function generateMetadata(props: {
   const service = getServiceById(id);
 
   return {
-    title: `${service?.title} | Services`,
+    title: `${service?.title} | Products`,
     description: service?.description,
   };
 }
