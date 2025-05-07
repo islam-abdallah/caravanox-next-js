@@ -7,7 +7,7 @@ export const projects: Record<string, ProjectType> = {
     titleAr: 'كبائن منتجع الشاطئ',
     description: 'Custom designed prefabricated cabins for a luxury beach resort. The units were designed to withstand coastal weather conditions while providing comfort and style.',
     descriptionAr: 'كبائن مسبقة الصنع مصممة خصيصًا لمنتجع شاطئي فاخر. تم تصميم الوحدات لتتحمل الظروف الجوية الساحلية مع توفير الراحة والأناقة.',
-    category: 'Prefabricated Buildings',
+    category: 'Mobile Buildings',
     categoryAr: 'مباني مسبقة الصنع',
     client: 'Coastal Resorts Ltd.',
     clientAr: 'منتجعات الساحل المحدودة',

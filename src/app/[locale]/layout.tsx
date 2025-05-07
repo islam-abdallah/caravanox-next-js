@@ -5,6 +5,7 @@ import { Locale, i18n } from '@/i18n.config';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { getDictionary } from '@/lib/dictionary';
+import TopHeader from "@/components/TopHeader";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -39,13 +40,13 @@ export default async function RootLayout(props: {
 
   return (
     <html
-    
       lang={locale}
       className={`${poppins.variable} ${cairo.variable}`}
       dir={isRTL ? "rtl" : "ltr"}>
       <body
         suppressHydrationWarning
         className="min-h-screen flex flex-col bg-white">
+        <TopHeader locale={locale}  />
         <Navbar locale={locale} navigation={dictionary.navigation || {}} />
         <main className="flex-grow pt-20">{props.children}</main>
         <Footer
@@ -56,6 +57,5 @@ export default async function RootLayout(props: {
         />
       </body>
     </html>
-    
   );
 }

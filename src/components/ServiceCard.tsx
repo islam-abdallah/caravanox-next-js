@@ -26,7 +26,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   const displayTitle = locale === 'ar' ? titleAr : title;
   const displayDescription = locale === 'ar' ? descriptionAr : description;
-
+  console.log('ServiceCard', { id, title, titleAr, image, description, descriptionAr, delay, locale });
+  console.log('displayTitle', displayTitle);
+  console.log("locale === ar", locale);
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
