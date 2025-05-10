@@ -90,9 +90,10 @@ const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', 
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {locale === "ar" ? "نظرة عامة" : "Overview"}
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                {description}
-              </p>
+                <div
+                className="text-gray-600 mb-8 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: description }}
+                />
 
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {locale === "ar" ? "المميزات" : "Features"}

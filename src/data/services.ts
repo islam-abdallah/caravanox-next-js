@@ -3,20 +3,20 @@ import { type ServiceType } from '../types/service';
 export const categories = [
   'All',
   'Caravans',
-  'Facilities',
+  'Storage Solution',
   'Prefabricated Building',
   'Steel structures',
-  'Storage Solution',
+  'Facilities',
   'Support Services'
 ] as const;
 
 export const categoriesAr = {
   'All': 'الكل',
   'Caravans': 'كرفانات',
-  'Facilities': 'مرافق',
+  'Storage Solution': 'حلول تخزين',
   'Prefabricated Building': 'مبانى جاهزة',
   'Steel structures': 'هياكل معدنية',
-  'Storage Solution': 'حلول تخزين',
+  'Facilities': 'مرافق',
   'Support Services': 'خدمات الدعم'
 } as const;
 
@@ -50,23 +50,23 @@ export const services = {
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+3'
     ]
   },
-  'special-caravans': {
-    id: 'special-caravans',
-    title: 'Special Caravans',
-    titleAr: 'كرفانات خاصة',
-    category: 'Caravans',
-    categoryAr: 'كرفانات',
-    image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
-    gallery: [
-      'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
-      'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
-      'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+3'
-    ]
-  },
+  // 'special-caravans': {
+  //   id: 'special-caravans',
+  //   title: 'Special Caravans',
+  //   titleAr: 'كرفانات خاصة',
+  //   category: 'Caravans',
+  //   categoryAr: 'كرفانات',
+  //   image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
+  //   description: null,
+  //   descriptionAr: null,
+  //   features: [],
+  //   featuresAr: [],
+  //   gallery: [
+  //     'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
+  //     'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
+  //     'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+3'
+  //   ]
+  // },
   'foldable-caravans': {
     id: 'foldable-caravans',
     title: 'Foldable Caravans',
@@ -128,10 +128,18 @@ export const services = {
     category: 'Storage Solution',
     categoryAr: 'حلول تخزين',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: 'Modular prefabricated containers are a smart, modern solution for projects that require fast execution and high efficiency. Whether used as offices, housing units, restaurants, or more, they offer durability, easy transport, and quick on-site installation thanks to off-site manufacturing. This significantly reduces construction time and costs compared to traditional building methods without compromising on quality or functionality making them an ideal choice for flexible and reliable project needs.',
+    descriptionAr: 'الحاويات المجهزة تُعد من أنسب الحلول العصرية للمشروعات اللي بتحتاج تنفيذ سريع وكفاءة عالية. سواء كانت للاستخدام كمكاتب، وحدات سكنية، مطاعم أو غيرها، فهى بتتميز بالمتانة، وسهولة النقل، وسرعة التركيب في وقت قياسي بفضل التصنيع المسبق. وده بيوفر وقت كبير في التنفيذ وتكلفة أقل مقارنة بالبناء التقليدي، من غير ما نقلل من جودة التشطيب أو كفاءة الاستخدام، وده بيخليها اختيار مثالي للمشروعات اللي بتحتاج مرونة واعتمادية.',
+    features: [
+      "Fast installation and immediate readiness",
+      "Pre-manufactured for time and cost efficiency",
+      "Steel structure resistant to weather conditions",
+      "Flexible interior design based on use"
+    ],
+    featuresAr: ["تركيب سريع وجاهزية فورية",
+      "تصنيع مسبق يوفر الوقت والتكلفة",
+      "هيكل فولاذي مقاوم للعوامل الجوية",
+      "تصميم داخلي مرن حسب الاستخدام"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -172,10 +180,16 @@ export const services = {
     category: 'Storage Solution',
     categoryAr: 'حلول تخزين',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: 'Metal racks are among the most efficient and reliable storage solutions for industrial and commercial environments. Built to withstand heavy-duty use, they feature a robust structure capable of handling heavy loads. Made from corrosion-resistant materials, they offer long-lasting durability. Their modular design allows for easy customization and installation, maximizing space efficiency.',
+    descriptionAr: 'ألارفف المعدنية تُعد من أكثر حلول التخزين كفاءة واعتمادية في البيئات الصناعية والتجارية. مصممة لتحمّل الأعمال الشاقة، وتتميز بهيكل قوي يتحمل الأوزان الثقيلة، ومصنوعة من خامات مقاومة للتآكل والصدأ لضمان عمر افتراضي طويل. تصميمها المعياري يتيح سهولة التخصيص والتركيب، مما يعزز تنظيم المساحات بأعلى كفاءة',
+    features: ["Easy and quick to install",
+      "Fast production for storage needs",
+      "Durable, rust-resistant metal frames",
+      "Flexible design to fit spaces"],
+    featuresAr: ["تركيب ونقل سريع وسهل",
+      "تصنيع فوري لتخزين فعال",
+      "هياكل قوية مقاومة للصدأ",
+      "تصميم مرن حسب الحاجة"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -189,10 +203,16 @@ export const services = {
     category: 'Prefabricated Building',
     categoryAr: 'مبانى جاهزة',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: 'When looking for a quick and efficient solution for projects, prefabricated buildings are an ideal choice. Thanks to off-site manufacturing, units can be assembled in a short time, significantly reducing time and costs compared to traditional construction methods. These solutions offer design flexibility, making them suitable for various uses such as offices, housing, or service units. With durability, easy transport, and installation, prefabricated buildings provide a practical solution that kickstarts your project quickly while maintaining the highest quality standards.',
+    descriptionAr: 'عند البحث عن حل سريع وفعّال لتنفيذ المشاريع، تعتبر المباني الجاهزة خيارًا مثاليًا. بفضل التصنيع المسبق في المصانع، يتم تركيب الوحدات في وقت قياسي، مما يقلل من الوقت والتكاليف مقارنة بأساليب البناء التقليدية. توفر هذه الحلول مرونة في التصميم، مما يجعلها مناسبة للاستخدامات المختلفة مثل المكاتب، السكن، أو الوحدات الخدمية. مع ضمان المتانة وسهولة النقل والتركيب، تُعد المباني الجاهزة خيارًا عمليًا يبدأ مشروعك بسرعة ويحافظ على أعلى معايير الجودة.',
+    features: ["Fast installation and immediate readiness",
+      "Pre-manufactured for time and cost efficiency",
+      "Strong structure resistant to weather conditions",
+      "Flexible design tailored to various needs"],
+    featuresAr: ["تركيب سريع وجودة فورية",
+      "تصنيع مسبق يوفر الوقت والتكلفة",
+      "هيكل قوي يتحمل الظروف المناخية",
+      "تصميم مرن يتناسب مع الاحتياجات المختلفة"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -206,10 +226,31 @@ export const services = {
     category: 'Prefabricated Building',
     categoryAr: 'مبانى جاهزة',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: `If you’re looking to build a home quickly and without hassle, prefabricated houses are a smart choice. They’re fully built in factories and delivered ready for installation, saving you a lot of time and effort compared to traditional construction.
+
+You can customize the layout to fit your needs—whether it’s the number of rooms, finishes, or space. The materials are durable, weather-resistant, and well-insulated for both heat and sound.
+
+These homes are perfect for permanent living, vacation houses, or even temporary site accommodations. Plus, they’re easy to transport and assemble, so relocating them is no issue.
+
+Prefabricated homes also reduce material waste and are eco-friendly, designed to be energy efficient and sustainable.
+
+In short, if you want a reliable, fast, and cost-effective housing solution without compromising on quality, a prefab home is the modern, practical way to go.`,
+    descriptionAr: `لو بتفكر تبني بيت بسرعة ومن غير وجع دماغ، المنازل الجاهزة هتكون اختيار ممتاز.
+بتتعمل بالكامل في المصنع وبتوصل للموقع جاهزة على التركيب، يعني هتوفر وقت ومجهود كتير مقارنة بالبناء التقليدي.
+الميزة إنك تقدر تتحكم في التصميم على حسب احتياجك، سواء عدد الغرف أو التشطيب أو المساحة.
+وكمان خاماتها قوية وتستحمل الجو، ومعزولة كويس من الحرارة والصوت.
+المنازل دي مناسبة للسكن، الشاليهات، أو حتى مواقع العمل المؤقتة.
+وسهلة في النقل والتركيب، فلو احتجت تنقلها من مكان لمكان، مفيش مشكلة.
+كمان بتقلل الهدر في الخامات، وبتكون صديقة للبيئة وموفرة في استهلاك الطاقة.
+يعني باختصار، لو عايز تبدأ مشروع أو تعيش في بيت محترم بأقل وقت وتكلفة، ومن غير ما تستنى شهور في البناء، المنازل الجاهزة هي الحل العملي والذكي.`,
+    features: ["Quick installation and immediate readiness",
+      "Off-site manufacturing saves time and cost",
+      "Durable steel structure withstands weather conditions",
+      "Flexible interior layout tailored to your needs"],
+    featuresAr: ["تركيب سريع وجاهزية للسكن فورًا",
+      "تصنيع مسبق يوفر الوقت والتكاليف",
+      "هيكل قوي يتحمل الظروف المناخية",
+      "تصميم داخلي مرن حسب احتياجاتك"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -223,10 +264,17 @@ export const services = {
     category: 'Steel structures',
     categoryAr: 'هياكل معدنية',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: 'Steel hangars are structural buildings based on pre-engineered steel frames, designed for versatile uses such as storage, manufacturing, agriculture, and exhibitions. Thanks to their flexibility and quick assembly, they are an ideal solution for projects requiring large-scale construction in a short time and at a reasonable cost. Hangars can be customized in size and shape to suit specific needs, while offering excellent protection against weather conditions. Widely used in factories, workshops, warehouses, and logistics centers, they are known for their strength, load-bearing capacity, and easy maintenance. Their robust structure makes them suitable for long-term use with the potential for future expansion.',
+    descriptionAr: 'الهناجر المعدنية هي مبانٍ إنشائية تعتمد على هياكل فولاذية مصممة مسبقًا لتُستخدم في مجالات متعددة مثل التخزين، الإنتاج، الزراعة، والمعارض. بفضل مرونتها وسرعة تركيبها، تُعد خيارًا مثاليًا للمشروعات التي تتطلب إنشاءات واسعة بوقت قصير وتكلفة مناسبة. يمكن تصميم الهناجر بأحجام وأشكال مختلفة لتناسب طبيعة الاستخدام، كما توفر حماية ممتازة من العوامل الجوية. تُستخدم على نطاق واسع في المصانع، الورش، المخازن، ومراكز الخدمات اللوجستية، وتُعرف بتحملها للأحمال الثقيلة وسهولة صيانتها. هيكلها القوي يجعلها مناسبة للاستخدام طويل الأمد مع إمكانية التوسعة المستقبلية حسب الحاجة',
+    features: ["Fast installation significantly reduces build time",
+      "Steel structure handles heavy industrial loads",
+      "Flexible design suits various applications",
+      "High resistance to harsh weather conditions"],
+    featuresAr: ["تركيب سريع يقلل وقت التنفيذ تمامًا",
+      "هيكل معدني يتحمل الأحمال الثقيلة",
+      "تصميم مرن يناسب مختلف الاستخدامات",
+      "مقاومة عالية للعوامل الجوية القاسية"
+],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -240,10 +288,28 @@ export const services = {
     category: 'Steel structures',
     categoryAr: 'هياكل معدنية',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: `If your work relies on weighing trucks or heavy loads, weighbridges (bascule scales) are an essential tool for any industrial or logistics site looking to operate with precision and efficiency. These systems are fully manufactured off-site and come in different configurations—surface-mounted or pit-mounted—making installation and operation easy and adaptable.
+
+Built from heavy-duty materials, they’re designed to handle high loads and withstand harsh conditions, ensuring long-term reliability. They can also be seamlessly integrated with your management systems or software for smooth operation and tracking.
+
+Ideal for factories, distribution hubs, construction sites, and ports, weighbridges offer high accuracy and help reduce waste and operational errors.
+
+In short, a bascule scale is a smart, practical investment for any business that values precision, speed, and durability in every weighing process.`,
+    descriptionAr: `لو شغلك بيعتمد على وزن الشاحنات أو الحمولات الكبيرة، فموازين البسكول هي أداة أساسية لأي موقع صناعي أو لوجيستي عايز يشتغل بكفاءة ودقة. الموازين دي بتتصنع بالكامل في المصنع وبتتوفر بأنظمة مختلفة تناسب احتياجاتك، سواء كانت سطحية أو مدفونة، مع سهولة في التركيب والتشغيل.
+
+الخامات المستخدمة قوية ومصممة علشان تتحمل الضغط العالي والاستخدام اليومي تحت أصعب الظروف، وكمان بتشتغل بكفاءة في كل الأجواء. تقدر تربطها بسهولة بأنظمة الإدارة أو برامج المتابعة عندك علشان تسهل كل خطوات التشغيل والمتابعة.
+
+الموازين دي مناسبة للمصانع، محطات التوزيع، المواقع الإنشائية، والموانئ، وبتوفرلك دقة عالية في الوزن، وتقليل كبير للهدر أو الخطأ.
+
+باختصار، موازين البسكول هي الحل العملي لأي مشروع بيحتاج يعتمد على الدقة، السرعة، والمتانة في كل عملية وزن.`,
+    features: ["Quick installation and immediate operation",
+      "Pre-fabricated structure saves time and cost",
+      "Heavy-duty frame built for high loads",
+      "Flexible design to suit various sites and uses"],
+    featuresAr: ["تركيب سريع وتشغيل فوري",
+      "تصنيع مسبق يقلل الوقت والتكاليف",
+      "هيكل معدني قوي يتحمل الأوزان الثقيلة",
+      "تصميم مرن يناسب مختلف المواقع والاستخدامات"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -257,10 +323,34 @@ export const services = {
     category: 'Facilities',
     categoryAr: 'مرافق',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: `Fiberglass security booths are ideal solutions for providing a safe and functional working environment for security personnel at various locations such as factories, villas, tourist resorts, and hospitals. These booths are lightweight and easy to transport and install, making them suitable for both temporary and permanent use. They are also weather-resistant, thermally and acoustically insulated, and designed to ensure comfort during daily use.
+
+Standard Sizes of Fiberglass Security Booths vary depending on the use, but the most common available sizes are:
+        •        1 × 1 meter (suitable for one security guard)
+        •        1.2 × 1.2 meters
+        •        1.5 × 1.5 meters
+        •        2 × 2 meters (for two or more personnel)
+        •        3 × 2 meters (for larger sites or multi-functional booths)
+
+Custom sizes can also be made to suit the site and the client’s specific needs.`,
+    descriptionAr: `أكشاك الحراسة المصنوعة من الفيبر جلاس تُعد من الحلول المثالية لتوفير بيئة عمل آمنة وعملية لأفراد الأمن في مختلف المواقع، مثل المصانع، الفيلات، القرى السياحية، والمستشفيات. تتميز هذه الأكشاك بخفة وزنها وسهولة نقلها وتركيبها، مما يجعلها مناسبة للاستخدام المؤقت أو الدائم. كما أنها مقاومة للعوامل الجوية، ومعزولة حراريًا وصوتيًا، ومصممة لتوفير الراحة أثناء الاستخدام اليومي.
+
+المقاسات القياسية لأكشاك الأمن الفيبر جلاس تختلف حسب الاستخدام، لكن من أشهر المقاسات المتوفرة:
+        •        1 × 1 متر (مناسب لفرد أمن واحد)
+        •        1.2 × 1.2 متر
+        •        1.5 × 1.5 متر
+        •        2 × 2 متر (لفردين أو أكثر)
+        •        3 × 2 متر (للمواقع الأكبر أو الأكشاك متعددة الوظائف)
+
+ويمكن أيضًا تفصيل المقاسات حسب الطلب، لتناسب الموقع واحتياجات العميل`,
+    features: ["Lightweight for easy transport and quick installation",
+      "High resistance to heat, humidity, and rain",
+      "Thermal and acoustic insulation for enhanced comfort",
+      "Flexible design suitable for various spaces"],
+    featuresAr: ["خفة الوزن تسهل النقل والتركيب السريع",
+      "مقاومة عالية للحرارة، الرطوبة والأمطار",
+      "عزل حراري وصوتي يعزز راحة المستخدم",
+      "تصميم مرن يتناسب مع المساحات المختلفة"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -274,10 +364,16 @@ export const services = {
     category: 'Facilities',
     categoryAr: 'مرافق',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: 'Mobile toilets made from sandwich panels offer a smart, fast solution for any site that needs temporary sanitary facilities. Their insulated design ensures user comfort in both hot and cold weather, while the durable materials resist harsh environmental conditions. They’re easy to transport and install, and available in various sizes based on your needs—without requiring complex setup. Perfect for construction sites, events, and camps, they can also be equipped with showers, fans, lighting, and water tanks as needed. A practical, clean, and professional-looking option for any location.',
+    descriptionAr: 'الحمامات المتنقلة المصنوعة من الساندويتش بانل بتوفر حل ذكي وسريع لأي موقع محتاج مرافق صحية مؤقتة. تصميمها العازل بيضمن راحة في الاستخدام سواء في الحر أو البرد، وخامتها القوية مقاومة للعوامل الجوية. سهلة في النقل والتركيب، وبتتوفر بمقاسات متنوعة حسب الاحتياج، من غير ما تحتاج تجهيزات معقدة. مناسبة لمواقع الإنشاء، الفعاليات، والمعسكرات، وكمان ممكن تتجهز بدوش، مراوح، إضاءة، وخزانات مياه حسب الطلب. خيار عملي ونظيف ويدّي شكل محترم في أي مكان.',
+    features: ["Quick setup and immediate use",
+      "Fully waterproof and moisture-resistant",
+      "Sturdy structure built for tough conditions",
+      "Flexible design tailored to your needs"],
+    featuresAr: ["تركيب سريع واستخدام فوري",
+      "عزل تام ضد المياه والرطوبة",
+      "هيكل قوي يستحمل الشغل والجو",
+      "تصميم مرن يتظبط حسب احتياجك"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -291,10 +387,37 @@ export const services = {
     category: 'Support Services',
     categoryAr: 'خدمات الدعم',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: `Our Comprehensive Services for Installation and Dismantling of Metal Works and Prefabricated Buildings
+
+At our company, we offer integrated installation and dismantling services for metal works, sandwich panels, icon sheets, trusses, and prefabricated buildings, providing fast and efficient solutions to meet the needs of our clients across various industries. Our services include:
+        •        Installation and Dismantling of Metal Works: Whether it’s steel structures or trusses, our specialized team ensures the execution of tasks with high precision according to the highest quality standards.
+        •        Sandwich Panel Installation: We provide fast and professional installation of insulating panels, ensuring outstanding thermal and sound insulation performance.
+        •        Icon Sheet Installation: Our expertise allows us to deliver comprehensive installation solutions that offer optimal protection against weather conditions.
+        •        Prefabricated Building Installation: By using the latest prefabrication technologies, we ensure the installation of prefabricated buildings with exceptional quality and in record time.
+
+Advantages of Our Services:
+        •        Fast Execution: Saving you time and helping you start your project as soon as possible.
+        •        High Quality: Precision execution using the latest equipment.
+        •        Flexibility and Customization: We provide solutions tailored to the specific needs of your projects.
+
+We are here to provide the best construction solutions for your projects, ensuring the highest levels of efficiency and professionalism.`,  
+  descriptionAr: `خدماتنا المتكاملة للتركيب والفك للأعمال المعدنية والمباني الجاهزة
+
+في شركتنا، نوفّر خدمات تركيب وفك متكاملة للأعمال المعدنية، السندوتش بانل، الصاج الأيكون، الجمالونات، والمباني الجاهزة، حيث نوفر حلولًا سريعة وفعّالة تلبية لاحتياجات عملائنا في مختلف الصناعات. تشمل خدماتنا:
+        •        التركيب والفك للأعمال المعدنية: سواء كانت هياكل فولاذية أو جمالونات، فريقنا المتخصص يتأكد من تنفيذ الأعمال بدقة عالية وفقًا لأعلى معايير الجودة.
+        •        تركيب السندوتش بانل: نوفر تركيب سريع واحترافي للألواح العازلة، مما يضمن أداءً متميزًا في العزل الحراري والصوتي.
+        •        تركيب الصاج الأيكون: خبرتنا تتيح لنا تقديم حلول تركيب متكاملة توفر الحماية المثلى ضد العوامل الجوية.
+        •        تركيب المباني الجاهزة: من خلال استخدام أحدث تقنيات التصنيع المسبق، نضمن لك تركيب المباني الجاهزة بجودة فائقة، وفي وقت قياسي.`, 
+        features: ["Fast Execution: We ensure the project is completed swiftly, allowing you to start as soon as possible.",
+      "High Quality: Every task is carried out with precision using the latest equipment and technologies.",
+      "Flexibility and Customization: Our services are designed to meet your specific project needs, ensuring the best solutions.",
+      "Professional Expertise: Our specialized team guarantees the highest standards and optimal solutions for all your construction needs."
+],
+    featuresAr: ["سرعة التنفيذ: نضمن إتمام المشروع بسرعة، مما يساعدك على البدء في أقرب وقت ممكن.",
+      "جودة عالية: يتم تنفيذ كل مهمة بدقة باستخدام أحدث المعدات والتقنيات.",
+      "مرونة وتخصيص: خدماتنا مصممة لتلبية احتياجات مشروعك الخاصة، مما يضمن أفضل الحلول.",
+      "خبرة احترافية: فريقنا المتخصص يضمن أعلى المعايير وأفضل الحلول لجميع احتياجاتك."
+],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -308,10 +431,49 @@ export const services = {
     category: 'Support Services',
     categoryAr: 'خدمات الدعم',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: `  <p>
+    At our company, we provide comprehensive and regular maintenance services for all types of structures—whether prefabricated buildings, caravans, steel hangars, trusses, or sandwich panels. Our goal is to maintain optimal operational efficiency, extend the lifespan of your assets, and prevent future issues.
+  </p>
+
+  <h3>Our Maintenance Services Include:</h3>
+  <ul>
+    <li>Full inspection of structures and caravans to ensure safety and integrity</li>
+    <li>Rust treatment and corrosion protection for metal components</li>
+    <li>Waterproofing and thermal insulation maintenance based on usage</li>
+    <li>Repair or replacement of damaged parts such as doors, windows, and panels</li>
+    <li>Re-fastening components and checking all connections</li>
+  </ul>
+
+  <p>
+    If you’re looking for durability, reliability, and long-term performance—Caravanox maintenance services have you covered.
+  </p>`,
+    descriptionAr: `  <h3>خدمات الصيانة الفنية للمباني الجاهزة والمنشآت المعدنية والكرفانات</h3>
+  <p>
+    في شركتنا، بنقدّم خدمات صيانة شاملة ودورية لكل أنواع المنشآت، سواء كانت مباني جاهزة،
+    كرفانات، هياكل معدنية، جمالونات، أو ألواح سندوتش بانل. هدفنا نحافظ على كفاءة التشغيل،
+    ونطوّل عمر المنشأة، ونمنع أي مشاكل ممكن تظهر مع الوقت.
+  </p>
+
+  <h4>تشمل خدمات الصيانة:</h4>
+  <ul>
+    <li>فحص شامل للهياكل والكرفانات والتأكد من سلامتها</li>
+    <li>معالجة الصدأ والتآكل في القطاعات المعدنية</li>
+    <li>صيانة العزل المائي والحراري حسب الاستخدام</li>
+    <li>استبدال أو إصلاح الأجزاء التالفة مثل الأبواب والنوافذ والألواح</li>
+    <li>إعادة تثبيت المكونات والتأكد من سلامة التوصيلات</li>
+  </ul>
+
+  <p>
+    لو بتدور على استدامة حقيقية وجودة تدوم، صيانة كرفان أوكس هتكون دايمًا في ضهرك.
+  </p>`,
+    features: ["Fast emergency response",
+      "Periodic maintenance contracts tailored to your needs",
+      "Detailed technical reports after every visit",
+      "A skilled and well-trained professional team"],
+    featuresAr: ["سرعة استجابة في الطوارئ",
+      "عقود صيانة دورية حسب احتياجك",
+      "تقارير مفصلة بعد كل زيارة",
+      "فريق فني محترف ومدرّب"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -325,10 +487,50 @@ export const services = {
     category: 'Support Services',
     categoryAr: 'خدمات الدعم',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: null,
-    descriptionAr: null,
-    features: [],
-    featuresAr: [],
+    description: `  <p>
+    At Caravanox, we offer fast and professional transportation services for all types of
+    prefabricated units, caravans, containers, and heavy equipment—whether within the same site
+    or across governorates. With the right capabilities and experience, we ensure safe,
+    well-organized transport with full commitment to timelines and project requirements.
+  </p>
+
+  <h3>We Transport:</h3>
+  <ul>
+    <li>Office and accommodation caravans</li>
+    <li>Storage containers and equipment</li>
+    <li>Mobile toilets and utility units</li>
+    <li>Steel hangars and prefabricated buildings</li>
+  </ul>
+
+  <p>
+    If your company needs reliable, hassle-free transportation, we’re ready to deliver—anytime,
+    anywhere.
+  </p>`,
+    descriptionAr: `  <p>
+    نوفّر في كرفان أوكس خدمات نقل احترافية وسريعة لكل أنواع المنشآت الجاهزة، الكرفانات، الحاويات،
+    والمعدات الثقيلة، سواء داخل المواقع أو بين المحافظات. عندنا الإمكانيات والخبرة
+    اللي تضمنلك نقل آمن ومنظم، مع الالتزام الكامل بالمواعيد ومتطلبات كل مشروع.
+  </p>
+
+  <h3>نقل يشمل:</h3>
+  <ul>
+    <li>كرفانات المكاتب والسكن</li>
+    <li>حاويات التخزين والمعدات</li>
+    <li>الحمامات المتنقلة والوحدات الخدمية</li>
+    <li>الهناجر والمباني سابقة التجهيز</li>
+  </ul>
+
+  <p>
+    لو شركتك محتاجة نقل سريع وآمن، إحنا جاهزين نخدمك في أي وقت.
+  </p>`,
+    features: ["Fully equipped transport fleet",
+      "Trained teams for safe lifting and securing",
+      "Pre-planned transport routes and delivery schedules",
+      "Flexible timing and 24/7 service availability"],
+    featuresAr: ["أسطول نقل مجهز بالكامل",
+      "فرق مدربة على الرفع والتثبيت الآمن",
+      "تخطيط مسبق لمسارات النقل والتسليم",
+      "مرونة في المواعيد وخدمة على مدار الساعة"],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -338,7 +540,7 @@ export const services = {
 } as const;
 
 export const getFeaturedServices = () => [
-  services['storage-containers'],
+  services['standard-caravans'],
   services['equipped-containers'],
   services['refrigerated-containers'],
   services['security-booths']
