@@ -49,7 +49,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           </div>
         </div>
         <div className="p-4">
-          <p className="text-gray-600 line-clamp-2">{displayDescription}</p>
+            <p
+            className="text-gray-600 line-clamp-2"
+            dangerouslySetInnerHTML={{ __html: displayDescription }}
+            ></p>
         </div>
       </Link>
     </motion.div>
