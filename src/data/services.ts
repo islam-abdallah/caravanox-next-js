@@ -226,23 +226,25 @@ export const services = {
     category: 'Prefabricated Building',
     categoryAr: 'مبانى جاهزة',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: `If you’re looking to build a home quickly and without hassle, prefabricated houses are a smart choice. They’re fully built in factories and delivered ready for installation, saving you a lot of time and effort compared to traditional construction.
+    description: `
+<div lang="en" dir="ltr" style="font-family: sans-serif; line-height: 1.6;">
+  <p>If you’re looking to build a home quickly and without hassle, prefabricated houses are a smart choice. They’re fully built in factories and delivered ready for installation, saving you a lot of time and effort compared to traditional construction.</p>
+  <p>You can customize the layout to fit your needs—whether it’s the number of rooms, finishes, or space. The materials are durable, weather-resistant, and well-insulated for both heat and sound.</p>
+  <p>These homes are perfect for permanent living, vacation houses, or even temporary site accommodations. Plus, they’re easy to transport and assemble, so relocating them is no issue.</p>
+  <p>Prefabricated homes also reduce material waste and are eco-friendly, designed to be energy efficient and sustainable.</p>
+  <p>In short, if you want a reliable, fast, and cost-effective housing solution without compromising on quality, a prefab home is the modern, practical way to go.</p>
+</div>
+  `.trim(),
 
-You can customize the layout to fit your needs—whether it’s the number of rooms, finishes, or space. The materials are durable, weather-resistant, and well-insulated for both heat and sound.
-
-These homes are perfect for permanent living, vacation houses, or even temporary site accommodations. Plus, they’re easy to transport and assemble, so relocating them is no issue.
-
-Prefabricated homes also reduce material waste and are eco-friendly, designed to be energy efficient and sustainable.
-
-In short, if you want a reliable, fast, and cost-effective housing solution without compromising on quality, a prefab home is the modern, practical way to go.`,
-    descriptionAr: `لو بتفكر تبني بيت بسرعة ومن غير وجع دماغ، المنازل الجاهزة هتكون اختيار ممتاز.
-بتتعمل بالكامل في المصنع وبتوصل للموقع جاهزة على التركيب، يعني هتوفر وقت ومجهود كتير مقارنة بالبناء التقليدي.
-الميزة إنك تقدر تتحكم في التصميم على حسب احتياجك، سواء عدد الغرف أو التشطيب أو المساحة.
-وكمان خاماتها قوية وتستحمل الجو، ومعزولة كويس من الحرارة والصوت.
-المنازل دي مناسبة للسكن، الشاليهات، أو حتى مواقع العمل المؤقتة.
-وسهلة في النقل والتركيب، فلو احتجت تنقلها من مكان لمكان، مفيش مشكلة.
-كمان بتقلل الهدر في الخامات، وبتكون صديقة للبيئة وموفرة في استهلاك الطاقة.
-يعني باختصار، لو عايز تبدأ مشروع أو تعيش في بيت محترم بأقل وقت وتكلفة، ومن غير ما تستنى شهور في البناء، المنازل الجاهزة هي الحل العملي والذكي.`,
+    descriptionAr: `
+<div lang="ar" dir="rtl" style="font-family: sans-serif; line-height: 1.6;">
+  <p>لو بتفكر تبني بيت بسرعة ومن غير وجع دماغ، المنازل الجاهزة هتكون اختيار ممتاز. بتتعمل بالكامل في المصنع وبتوصل للموقع جاهزة على التركيب، يعني هتوفر وقت ومجهود كتير مقارنة بالبناء التقليدي.</p>
+  <p>الميزة إنك تقدر تتحكم في التصميم على حسب احتياجك، سواء عدد الغرف أو التشطيب أو المساحة. وكمان خاماتها قوية وتستحمل الجو، ومعزولة كويس من الحرارة والصوت.</p>
+  <p>المنازل دي مناسبة للسكن، الشاليهات، أو حتى مواقع العمل المؤقتة. وسهلة في النقل والتركيب، فلو احتجت تنقلها من مكان لمكان، مفيش مشكلة.</p>
+  <p>كمان بتقلل الهدر في الخامات، وبتكون صديقة للبيئة وموفرة في استهلاك الطاقة.</p>
+  <p>يعني باختصار، لو عايز تبدأ مشروع أو تعيش في بيت محترم بأقل وقت وتكلفة، ومن غير ما تستنا شهور في البناء، المنازل الجاهزة هي الحل العملي والذكي.</p>
+</div>
+  `.trim(),
     features: ["Quick installation and immediate readiness",
       "Off-site manufacturing saves time and cost",
       "Durable steel structure withstands weather conditions",
@@ -274,7 +276,7 @@ In short, if you want a reliable, fast, and cost-effective housing solution with
       "هيكل معدني يتحمل الأحمال الثقيلة",
       "تصميم مرن يناسب مختلف الاستخدامات",
       "مقاومة عالية للعوامل الجوية القاسية"
-],
+    ],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
@@ -288,20 +290,39 @@ In short, if you want a reliable, fast, and cost-effective housing solution with
     category: 'Steel structures',
     categoryAr: 'هياكل معدنية',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: `If your work relies on weighing trucks or heavy loads, weighbridges (bascule scales) are an essential tool for any industrial or logistics site looking to operate with precision and efficiency. These systems are fully manufactured off-site and come in different configurations—surface-mounted or pit-mounted—making installation and operation easy and adaptable.
+    description: `
+<div lang="en" dir="ltr" style="font-family: sans-serif; line-height: 1.6;">
+  <p>
+    If your work relies on weighing trucks or heavy loads, weighbridges (bascule scales) are an essential tool for any industrial or logistics site looking to operate with precision and efficiency. These systems are fully manufactured off-site and come in different configurations—surface-mounted or pit-mounted—making installation and operation easy and adaptable.
+  </p>
+  <p>
+    Built from heavy-duty materials, they’re designed to handle high loads and withstand harsh conditions, ensuring long-term reliability. They can also be seamlessly integrated with your management systems or software for smooth operation and tracking.
+  </p>
+  <p>
+    Ideal for factories, distribution hubs, construction sites, and ports, weighbridges offer high accuracy and help reduce waste and operational errors.
+  </p>
+  <p>
+    In short, a bascule scale is a smart, practical investment for any business that values precision, speed, and durability in every weighing process.
+  </p>
+</div>
+  `.trim(),
 
-Built from heavy-duty materials, they’re designed to handle high loads and withstand harsh conditions, ensuring long-term reliability. They can also be seamlessly integrated with your management systems or software for smooth operation and tracking.
-
-Ideal for factories, distribution hubs, construction sites, and ports, weighbridges offer high accuracy and help reduce waste and operational errors.
-
-In short, a bascule scale is a smart, practical investment for any business that values precision, speed, and durability in every weighing process.`,
-    descriptionAr: `لو شغلك بيعتمد على وزن الشاحنات أو الحمولات الكبيرة، فموازين البسكول هي أداة أساسية لأي موقع صناعي أو لوجيستي عايز يشتغل بكفاءة ودقة. الموازين دي بتتصنع بالكامل في المصنع وبتتوفر بأنظمة مختلفة تناسب احتياجاتك، سواء كانت سطحية أو مدفونة، مع سهولة في التركيب والتشغيل.
-
-الخامات المستخدمة قوية ومصممة علشان تتحمل الضغط العالي والاستخدام اليومي تحت أصعب الظروف، وكمان بتشتغل بكفاءة في كل الأجواء. تقدر تربطها بسهولة بأنظمة الإدارة أو برامج المتابعة عندك علشان تسهل كل خطوات التشغيل والمتابعة.
-
-الموازين دي مناسبة للمصانع، محطات التوزيع، المواقع الإنشائية، والموانئ، وبتوفرلك دقة عالية في الوزن، وتقليل كبير للهدر أو الخطأ.
-
-باختصار، موازين البسكول هي الحل العملي لأي مشروع بيحتاج يعتمد على الدقة، السرعة، والمتانة في كل عملية وزن.`,
+    descriptionAr: `
+<div lang="ar" dir="rtl" style="font-family: sans-serif; line-height: 1.6;">
+  <p>
+    لو شغلك بيعتمد على وزن الشاحنات أو الحمولات الكبيرة، فموازين البسكول هي أداة أساسية لأي موقع صناعي أو لوجيستي عايز يشتغل بكفاءة ودقة. الموازين دي بتتصنع بالكامل في المصنع وبتتوفر بأنظمة مختلفة تناسب احتياجاتك، سواء كانت سطحية أو مدفونة، مع سهولة في التركيب والتشغيل.
+  </p>
+  <p>
+    الخامات المستخدمة قوية ومصممة علشان تتحمل الضغط العالي والاستخدام اليومي تحت أصعب الظروف، وكمان بتشتغل بكفاءة في كل الأجواء. تقدر تربطها بسهولة بأنظمة الإدارة أو برامج المتابعة عندك علشان تسهل كل خطوات التشغيل والمتابعة.
+  </p>
+  <p>
+    الموازين دي مناسبة للمصانع، محطات التوزيع، المواقع الإنشائية، والموانئ، وبتوفرلك دقة عالية في الوزن، وتقليل كبير للهدر أو الخطأ.
+  </p>
+  <p>
+    باختصار، موازين البسكول هي الحل العملي لأي مشروع بيحتاج يعتمد على الدقة، السرعة، والمتانة في كل عملية وزن.
+  </p>
+</div>
+  `.trim(),
     features: ["Quick installation and immediate operation",
       "Pre-fabricated structure saves time and cost",
       "Heavy-duty frame built for high loads",
@@ -323,26 +344,47 @@ In short, a bascule scale is a smart, practical investment for any business that
     category: 'Facilities',
     categoryAr: 'مرافق',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: `Fiberglass security booths are ideal solutions for providing a safe and functional working environment for security personnel at various locations such as factories, villas, tourist resorts, and hospitals. These booths are lightweight and easy to transport and install, making them suitable for both temporary and permanent use. They are also weather-resistant, thermally and acoustically insulated, and designed to ensure comfort during daily use.
+    description: `
+<div lang="en" dir="ltr" style="font-family: sans-serif; line-height: 1.6;">
+  <p>
+    Fiberglass security booths are ideal solutions for providing a safe and functional working environment for security personnel at various locations such as factories, villas, tourist resorts, and hospitals. These booths are lightweight and easy to transport and install, making them suitable for both temporary and permanent use. They are also weather-resistant, thermally and acoustically insulated, and designed to ensure comfort during daily use.
+  </p>
 
-Standard Sizes of Fiberglass Security Booths vary depending on the use, but the most common available sizes are:
-        •        1 × 1 meter (suitable for one security guard)
-        •        1.2 × 1.2 meters
-        •        1.5 × 1.5 meters
-        •        2 × 2 meters (for two or more personnel)
-        •        3 × 2 meters (for larger sites or multi-functional booths)
+  <h3>Standard Sizes of Fiberglass Security Booths:</h3>
+  <ul>
+    <li>1 × 1 meter (suitable for one security guard)</li>
+    <li>1.2 × 1.2 meters</li>
+    <li>1.5 × 1.5 meters</li>
+    <li>2 × 2 meters (for two or more personnel)</li>
+    <li>3 × 2 meters (for larger sites or multi-functional booths)</li>
+  </ul>
 
-Custom sizes can also be made to suit the site and the client’s specific needs.`,
-    descriptionAr: `أكشاك الحراسة المصنوعة من الفيبر جلاس تُعد من الحلول المثالية لتوفير بيئة عمل آمنة وعملية لأفراد الأمن في مختلف المواقع، مثل المصانع، الفيلات، القرى السياحية، والمستشفيات. تتميز هذه الأكشاك بخفة وزنها وسهولة نقلها وتركيبها، مما يجعلها مناسبة للاستخدام المؤقت أو الدائم. كما أنها مقاومة للعوامل الجوية، ومعزولة حراريًا وصوتيًا، ومصممة لتوفير الراحة أثناء الاستخدام اليومي.
+  <p>
+    Custom sizes can also be made to suit the site and the client’s specific needs.
+  </p>
+</div>
+  `.trim(),
 
-المقاسات القياسية لأكشاك الأمن الفيبر جلاس تختلف حسب الاستخدام، لكن من أشهر المقاسات المتوفرة:
-        •        1 × 1 متر (مناسب لفرد أمن واحد)
-        •        1.2 × 1.2 متر
-        •        1.5 × 1.5 متر
-        •        2 × 2 متر (لفردين أو أكثر)
-        •        3 × 2 متر (للمواقع الأكبر أو الأكشاك متعددة الوظائف)
+    descriptionAr: `
+<div lang="ar" dir="rtl" style="font-family: sans-serif; line-height: 1.6;">
+  <p>
+    أكشاك الحراسة المصنوعة من الفيبر جلاس تُعد من الحلول المثالية لتوفير بيئة عمل آمنة وعملية لأفراد الأمن في مختلف المواقع، مثل المصانع، الفيلات، القرى السياحية، والمستشفيات. تتميز هذه الأكشاك بخفة وزنها وسهولة نقلها وتركيبها، مما يجعلها مناسبة للاستخدام المؤقت أو الدائم. كما أنها مقاومة للعوامل الجوية، ومعزولة حراريًا وصوتيًا، ومصممة لتوفير الراحة أثناء الاستخدام اليومي.
+  </p>
 
-ويمكن أيضًا تفصيل المقاسات حسب الطلب، لتناسب الموقع واحتياجات العميل`,
+  <h3>المقاسات القياسية لأكشاك الأمن الفيبر جلاس:</h3>
+  <ul>
+    <li>1 × 1 متر (مناسب لفرد أمن واحد)</li>
+    <li>1.2 × 1.2 متر</li>
+    <li>1.5 × 1.5 متر</li>
+    <li>2 × 2 متر (لفردين أو أكثر)</li>
+    <li>3 × 2 متر (للمواقع الأكبر أو الأكشاك متعددة الوظائف)</li>
+  </ul>
+
+  <p>
+    ويمكن أيضًا تفصيل المقاسات حسب الطلب، لتناسب الموقع واحتياجات العميل.
+  </p>
+</div>
+  `.trim(),
     features: ["Lightweight for easy transport and quick installation",
       "High resistance to heat, humidity, and rain",
       "Thermal and acoustic insulation for enhanced comfort",
@@ -387,37 +429,70 @@ Custom sizes can also be made to suit the site and the client’s specific needs
     category: 'Support Services',
     categoryAr: 'خدمات الدعم',
     image: 'https://fakeimg.pl/800x600/cccccc/666666?text=New+Caravans',
-    description: `Our Comprehensive Services for Installation and Dismantling of Metal Works and Prefabricated Buildings
+    description: `
+<div lang="en" dir="ltr" style="font-family: sans-serif; line-height: 1.6;">
+  <h3>Our Comprehensive Services for Installation and Dismantling of Metal Works and Prefabricated Buildings</h3>
+  <p>
+    At our company, we offer integrated installation and dismantling services for metal works,
+    sandwich panels, icon sheets, trusses, and prefabricated buildings, providing fast and
+    efficient solutions to meet the needs of our clients across various industries.
+  </p>
+  <h4>Our Services Include:</h4>
+  <ul>
+    <li><strong>Installation and Dismantling of Metal Works:</strong> Whether it’s steel structures or trusses, our specialized team ensures high-precision execution according to the highest quality standards.</li>
+    <li><strong>Sandwich Panel Installation:</strong> Fast and professional installation of insulating panels for outstanding thermal and acoustic performance.</li>
+    <li><strong>Icon Sheet Installation:</strong> Comprehensive installation solutions that offer optimal protection against weather conditions.</li>
+    <li><strong>Prefabricated Building Installation:</strong> Leveraging the latest prefabrication technologies to deliver exceptional quality in record time.</li>
+  </ul>
+  <h4>Advantages of Our Services:</h4>
+  <ul>
+    <li><strong>Fast Execution:</strong> Saving you time and helping you start your project as soon as possible.</li>
+    <li><strong>High Quality:</strong> Precision execution using the latest equipment.</li>
+    <li><strong>Flexibility and Customization:</strong> Solutions tailored to the specific needs of your projects.</li>
+  </ul>
+  <p>
+    We are here to provide the best construction solutions for your projects, ensuring the highest levels
+    of efficiency and professionalism.
+  </p>
+</div>
+  `.trim(),
 
-At our company, we offer integrated installation and dismantling services for metal works, sandwich panels, icon sheets, trusses, and prefabricated buildings, providing fast and efficient solutions to meet the needs of our clients across various industries. Our services include:
-        •        Installation and Dismantling of Metal Works: Whether it’s steel structures or trusses, our specialized team ensures the execution of tasks with high precision according to the highest quality standards.
-        •        Sandwich Panel Installation: We provide fast and professional installation of insulating panels, ensuring outstanding thermal and sound insulation performance.
-        •        Icon Sheet Installation: Our expertise allows us to deliver comprehensive installation solutions that offer optimal protection against weather conditions.
-        •        Prefabricated Building Installation: By using the latest prefabrication technologies, we ensure the installation of prefabricated buildings with exceptional quality and in record time.
-
-Advantages of Our Services:
-        •        Fast Execution: Saving you time and helping you start your project as soon as possible.
-        •        High Quality: Precision execution using the latest equipment.
-        •        Flexibility and Customization: We provide solutions tailored to the specific needs of your projects.
-
-We are here to provide the best construction solutions for your projects, ensuring the highest levels of efficiency and professionalism.`,  
-  descriptionAr: `خدماتنا المتكاملة للتركيب والفك للأعمال المعدنية والمباني الجاهزة
-
-في شركتنا، نوفّر خدمات تركيب وفك متكاملة للأعمال المعدنية، السندوتش بانل، الصاج الأيكون، الجمالونات، والمباني الجاهزة، حيث نوفر حلولًا سريعة وفعّالة تلبية لاحتياجات عملائنا في مختلف الصناعات. تشمل خدماتنا:
-        •        التركيب والفك للأعمال المعدنية: سواء كانت هياكل فولاذية أو جمالونات، فريقنا المتخصص يتأكد من تنفيذ الأعمال بدقة عالية وفقًا لأعلى معايير الجودة.
-        •        تركيب السندوتش بانل: نوفر تركيب سريع واحترافي للألواح العازلة، مما يضمن أداءً متميزًا في العزل الحراري والصوتي.
-        •        تركيب الصاج الأيكون: خبرتنا تتيح لنا تقديم حلول تركيب متكاملة توفر الحماية المثلى ضد العوامل الجوية.
-        •        تركيب المباني الجاهزة: من خلال استخدام أحدث تقنيات التصنيع المسبق، نضمن لك تركيب المباني الجاهزة بجودة فائقة، وفي وقت قياسي.`, 
-        features: ["Fast Execution: We ensure the project is completed swiftly, allowing you to start as soon as possible.",
+    descriptionAr: `
+<div lang="ar" dir="rtl" style="font-family: sans-serif; line-height: 1.6;">
+  <h3>خدماتنا المتكاملة للتركيب والفك للأعمال المعدنية والمباني الجاهزة</h3>
+  <p>
+    في شركتنا، نوفّر خدمات تركيب وفك متكاملة للأعمال المعدنية، السندوتش بانل،
+    الصاج الأيكون، الجمالونات، والمباني الجاهزة، حيث نوفر حلولًا سريعة وفعّالة
+    لتلبية احتياجات عملائنا في مختلف الصناعات.
+  </p>
+  <h4>تشمل خدماتنا:</h4>
+  <ul>
+    <li><strong>التركيب والفك للأعمال المعدنية:</strong> سواء كانت هياكل فولاذية أو جمالونات، فريقنا المتخصص يتأكد من تنفيذ الأعمال بدقة عالية وفقًا لأعلى معايير الجودة.</li>
+    <li><strong>تركيب السندوتش بانل:</strong> تركيب سريع واحترافي للألواح العازلة لضمان أداء متميز في العزل الحراري والصوتي.</li>
+    <li><strong>تركيب الصاج الأيكون:</strong> تقديم حلول تركيب متكاملة توفر الحماية المثلى ضد العوامل الجوية.</li>
+    <li><strong>تركيب المباني الجاهزة:</strong> باستخدام أحدث تقنيات التصنيع المسبق لضمان تركيب بجودة فائقة وفي وقت قياسي.</li>
+  </ul>
+  <h4>مزايا خدماتنا:</h4>
+  <ul>
+    <li><strong>سرعة التنفيذ:</strong> نوفر الوقت ونساعدك على بدء مشروعك في أقرب وقت ممكن.</li>
+    <li><strong>جودة عالية:</strong> تنفيذ دقيق باستخدام أحدث المعدات.</li>
+    <li><strong>مرونة وتخصيص:</strong> حلول مصممة خصيصًا لتلبية احتياجات مشاريعك.</li>
+  </ul>
+  <p>
+    نحن هنا لنقدم أفضل حلول البناء لمشاريعك، مع ضمان أعلى مستويات الكفاءة والاحترافية.
+  </p>
+</div>
+  `.trim(),
+    features: ["Fast Execution: We ensure the project is completed swiftly, allowing you to start as soon as possible.",
       "High Quality: Every task is carried out with precision using the latest equipment and technologies.",
       "Flexibility and Customization: Our services are designed to meet your specific project needs, ensuring the best solutions.",
       "Professional Expertise: Our specialized team guarantees the highest standards and optimal solutions for all your construction needs."
-],
+    ],
     featuresAr: ["سرعة التنفيذ: نضمن إتمام المشروع بسرعة، مما يساعدك على البدء في أقرب وقت ممكن.",
       "جودة عالية: يتم تنفيذ كل مهمة بدقة باستخدام أحدث المعدات والتقنيات.",
       "مرونة وتخصيص: خدماتنا مصممة لتلبية احتياجات مشروعك الخاصة، مما يضمن أفضل الحلول.",
       "خبرة احترافية: فريقنا المتخصص يضمن أعلى المعايير وأفضل الحلول لجميع احتياجاتك."
-],
+    ],
     gallery: [
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+1',
       'https://fakeimg.pl/800x600/cccccc/666666?text=Caravan+2',
