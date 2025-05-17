@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { i18n, Locale } from '@/i18n.config';
 
@@ -23,20 +23,28 @@ const Navbar: React.FC<NavbarProps> = ({ locale = 'ar', navigation = {} }) => {
   const pathName = usePathname();
 
   const redirectedPathName = (locale: string) => {
-    const searchParams = useSearchParams();
-
     if (!pathName) return '/';
-  
     const segments = pathName.split('/');
     segments[1] = locale;
-    const basePath = segments.join('/');
-  
-    const paramsString = searchParams?.toString();
-    if (paramsString) {
-      return `${basePath}?${paramsString}`;
-    }
-    return basePath;
-  }
+    return segments.join('/');
+  };
+
+  // const redirectedPathName = (locale: string) => {
+  //   const searchParams = useSearchParams();
+
+  //   if (!pathName) return "/";
+
+  //   const segments = pathName.split("/");
+  //   segments[1] = locale;
+  //   const basePath = segments.join("/");
+
+  //   const paramsString = searchParams?.toString();
+  //   if (paramsString) {
+  //     return `${basePath}?${paramsString}`;
+  //   }
+  //   return basePath;
+  // };
+
   // Function to check if a link is active
   const isLinkActive = (href: string) => {
     if (!pathName) return false;
