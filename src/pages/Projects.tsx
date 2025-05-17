@@ -1,22 +1,34 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Users, Calendar } from 'lucide-react';
 import { Locale } from '@/i18n.config';
 import { getAllProjects } from '@/data/projects';
+import { useSearchParams } from 'next/navigation';
 
 interface ProjectsProps {
   locale: Locale;
+  searchParams : any;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ locale }) => {
+const Projects: React.FC<ProjectsProps> = ({ locale, searchParams }) => {
   const { t } = useTranslation();
-  const projects = getAllProjects();
-  
-
+  searchParams = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  useEffect(() => {
+    const category = searchParams.get("catId");
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
+  const allProjects = getAllProjects();
+  const filteredProjects =
+    selectedCategory === "All"
+      ? allProjects
+      : allProjects.filter((project) => project.product_id === selectedCategory);
   return (
     <>
       <section className="pt-28 pb-16 bg-gray-50">
@@ -39,7 +51,7 @@ const Projects: React.FC<ProjectsProps> = ({ locale }) => {
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -76,7 +88,9 @@ const Projects: React.FC<ProjectsProps> = ({ locale }) => {
                       </div>
                       <div className="flex items-center">
                         <Calendar size={18} className="mr-2 rtl:ml-2" />
-                        <span className="line-clamp-1">{project.date.slice(0,4)}</span>
+                        <span className="line-clamp-1">
+                          {project.date.slice(0, 4)}
+                        </span>
                       </div>
                     </div>
                   </div>
