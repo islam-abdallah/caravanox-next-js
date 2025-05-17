@@ -36,14 +36,13 @@ const Projects: React.FC<ProjectsProps> = ({ locale , searchParams}) => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-800 mb-6">
-              {t("projects.heading", "Our Projects")}
+              {locale === "ar" ? " مشاريعنا الناجحة" : "Our Projects"}
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              {t(
-                "projects.description",
-                "Explore our successful projects and see how we've helped our clients achieve their goals."
-              )}
+              {locale === "ar"
+                ? "استكشف مشاريعنا الناجحة وكيف ساعدنا عملائنا في تحقيق أهدافهم."
+                : "Explore our successful projects and see how we've helped our clients achieve their goals."}
             </p>
           </div>
         </div>
