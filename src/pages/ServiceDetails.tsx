@@ -26,7 +26,7 @@ const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', 
   const service = getServiceById(id);
     // Get related projects based on service category
   const relatedProjects = getAllProjects().filter(
-    (project) => project.category === service?.category
+    (project) => project.product_id === service?.id
   );
 
   if (!service) {

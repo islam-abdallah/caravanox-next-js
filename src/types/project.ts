@@ -5,6 +5,7 @@ export interface ProjectType {
   category: string;
   categoryAr: string;
   client: string;
+  product_id: string;
   clientAr: string;
   date: string;
   location: string;
