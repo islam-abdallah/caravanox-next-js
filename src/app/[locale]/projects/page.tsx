@@ -1,21 +1,20 @@
-import { Metadata } from 'next';
-import ProjectsPage from '@/pages/Projects';
-import { Locale } from '@/i18n.config';
-import { getDictionary } from "@/lib/dictionary";
-import { console } from 'inspector';
+import { Locale } from "@/i18n.config";
+import ProjectsPage from "@/pages/Projects";
+import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: 'Projects | Caravans & Mobile Buildings',
-  description: 'Explore our successful projects',
+  title: "Projects | Caravans & Mobile Buildings",
+  description: "Explore our successful projects",
 };
 
 export default async function Projects(props: {
-  params: Promise<{ locale: Locale, catId: string }>;
+  params: Promise<{ locale: Locale }>;
 }) {
-  // await the params before accessing locale
   const { locale } = await props.params;
-  const { catId } = await props.params;
-  console.log("catId", catId);
-  return <ProjectsPage locale={locale}  />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsPage locale={locale} />
+    </Suspense>
+  );
 }
-

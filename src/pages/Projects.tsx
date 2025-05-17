@@ -1,22 +1,23 @@
-'use client';
+"use client"
 
+import { getAllProjects } from '@/data/projects';
+import { Locale } from '@/i18n.config';
+import { motion } from 'framer-motion';
+import { Calendar, Users } from 'lucide-react';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Users, Calendar } from 'lucide-react';
-import { Locale } from '@/i18n.config';
-import { getAllProjects } from '@/data/projects';
-import { useSearchParams } from 'next/navigation';
 
 interface ProjectsProps {
   locale: Locale;
-  searchParams : any;
+  searchParams? :any;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ locale, searchParams }) => {
-  const { t } = useTranslation();
+const Projects: React.FC<ProjectsProps> = ({ locale , searchParams}) => {
   searchParams = useSearchParams();
+  const { t } = useTranslation();
+
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   useEffect(() => {
     const category = searchParams.get("catId");
