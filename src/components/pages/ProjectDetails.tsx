@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Building2, Users, Calendar, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Building2, Users, Calendar, CheckCircle2, Mail, Phone, MessageCircle } from 'lucide-react';
 import CTAButton from '@/components/CTAButton';
 import { Locale } from '@/i18n.config';
 import { getProjectById } from '@/data/projects';
@@ -17,6 +17,12 @@ interface ProjectDetailsPageProps {
 }
 
 const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', id, dictionary = {} }) => {
+  const windowHref = window.location.href;
+  let messageWatsApp =
+    locale === "ar"
+      ? "مرحبًا، أنا مهتم بخدمتكم"
+      : " Hello, I'm interested in your service";
+
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -51,8 +57,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', 
       <div className="container mx-auto px-4 md:px-6">
         <button
           onClick={() => router.back()}
-          className="flex items-center space-x-2 rtl:space-x-reverse text-primary hover:text-primary/80 mb-6"
-        >
+          className="flex items-center space-x-2 rtl:space-x-reverse text-primary hover:text-primary/80 mb-6">
           <ArrowLeft size={20} />
           <span>Back to Projects</span>
         </button>
@@ -65,15 +70,14 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', 
           onClick={() => {
             setPhotoIndex(0);
             setIsOpen(true);
-          }}
-        >
+          }}>
           <img
             src={project.image}
             alt={title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-8">
-            <span className="inline-block px-4 py-2 bg-primary text-white text-sm rounded-full mb-4">
+            <span className="inline-block px-4 py-2 bg-primary text-white text-sm rounded-full mb-4 max-w-max">
               {category}
             </span>
             <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
@@ -99,40 +103,51 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Project Overview</h2>
+              transition={{ duration: 0.5, delay: 0.2 }}>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                {locale == "ar" ? "نظرة عامة على المشروع" : "Project Overview"}
+              </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 {description}
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Key Features</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                {locale == "ar" ? "الميزات الرئيسية" : "Key Features"}
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-2 rtl:space-x-reverse"
-                  >
-                    <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
+                    className="flex items-start space-x-2 rtl:space-x-reverse">
+                    <CheckCircle2
+                      className="text-primary flex-shrink-0 mt-1"
+                      size={20}
+                    />
                     <span className="text-gray-600">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Project Scope</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                {locale == "ar" ? "نطاق المشروع" : "Project Scope"}
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {scope.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-2 rtl:space-x-reverse"
-                  >
-                    <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
+                    className="flex items-start space-x-2 rtl:space-x-reverse">
+                    <CheckCircle2
+                      className="text-primary flex-shrink-0 mt-1"
+                      size={20}
+                    />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ))}
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Project Gallery</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                {locale == "ar" ? "معرض المشروع" : "Project Gallery"}
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {project.gallery.map((image, index) => (
                   <motion.div
@@ -144,8 +159,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', 
                     onClick={() => {
                       setPhotoIndex(index);
                       setIsOpen(true);
-                    }}
-                  >
+                    }}>
                     <div className="relative">
                       <img
                         src={image}
@@ -162,24 +176,25 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', 
                 open={isOpen}
                 close={() => setIsOpen(false)}
                 index={photoIndex}
-                slides={[project.image, ...project.gallery].map(src => ({ src }))}
+                slides={[project.image, ...project.gallery].map((src) => ({
+                  src,
+                }))}
               />
             </motion.div>
           </div>
 
-          <div className="lg:col-span-1">
+          {/* <div className="lg:col-span-1">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-gray-50 rounded-xl p-6 sticky top-24"
-            >
+              className="bg-gray-50 rounded-xl p-6 sticky top-24">
               <h3 className="text-xl font-bold text-gray-800 mb-6">
                 Interested in a Similar Project?
               </h3>
               <p className="text-gray-600 mb-6">
-                We can help you create a custom solution tailored to your specific needs.
-                Contact us today for a consultation.
+                We can help you create a custom solution tailored to your
+                specific needs. Contact us today for a consultation.
               </p>
               <CTAButton
                 text="Request a Quote"
@@ -187,6 +202,52 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ locale = 'ar', 
                 locale={locale}
                 className="w-full justify-center"
               />
+            </motion.div>
+          </div> */}
+          <div className="lg:col-span-1">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-gray-50 rounded-xl p-6 sticky top-24">
+              <h3 className="text-xl font-bold text-gray-800 mb-6">
+                {locale === "ar" ? "طلب معلومات" : "Request Information"}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {locale === "ar"
+                  ? "مهتم بهذه الخدمة؟ اتصل بنا لمزيد من المعلومات أو عرض سعر مخصص"
+                  : "Interested in this service? Contact us for more information or a custom quote"}
+              </p>
+
+              <div className="space-y-4">
+                {/* Email Button */}
+                <a
+                  href="mailto:sales@caravans-mobile.com"
+                  className="flex items-center justify-center space-x-2 rtl:space-x-reverse w-full px-4 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                  <Mail size={20} />
+                  <span>sales@caravans.com</span>
+                </a>
+
+                {/* Phone Button */}
+                <a
+                  href="tel:+201019319133"
+                  className="flex items-center justify-center space-x-2 rtl:space-x-reverse w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                  <Phone size={20} />
+                  <span>01019319133</span>
+                </a>
+
+                {/* WhatsApp Button */}
+                <a
+                  href={`https://wa.me/201019319133?text=${encodeURIComponent(
+                    `${messageWatsApp} : ${windowHref}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center space-x-2 rtl:space-x-reverse w-full px-4 py-3 bg-[#25D366] text-white rounded-lg hover:bg-[#25D366]/90 transition-colors">
+                  <MessageCircle size={20} />
+                  <span>01019319133</span>
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
