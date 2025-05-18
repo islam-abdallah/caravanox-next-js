@@ -113,7 +113,7 @@ const Footer: React.FC<FooterProps> = ({
           </div>
 
           {/* Services */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-6">
               {footer?.our_services || "Our Products"}
             </h3>
@@ -147,7 +147,7 @@ const Footer: React.FC<FooterProps> = ({
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>

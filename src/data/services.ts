@@ -13,7 +13,7 @@ export const categories = [
 export const categoriesAr = {
   'All': 'الكل',
   'Caravans': 'كرفانات',
-  'Storage Solution': 'حلول تخزين',
+  'Storage Solution': 'حاويات ',
   'Prefabricated Building': 'مبانى جاهزة',
   'Steel structures': 'هياكل معدنية',
   'Facilities': 'مرافق',
@@ -185,9 +185,9 @@ export const services = {
       'متانة عالية تناسب الظروف القاسية',
       'مقاسات قياسية: 10، 20، و40 قدم'
     ],
-    image: '/images/services/storage-solution/storage-containers/1.webp',
+    image: '/images/services/storage-solution/storage-containers/2.jpg',
     gallery: [
-      '/images/services/storage-solution/storage-containers/2.jpg',
+      '/images/services/storage-solution/storage-containers/1.webp',
       '/images/services/storage-solution/storage-containers/3.jpg'
     ],
   },
@@ -484,7 +484,7 @@ export const services = {
   'maintenance': {
     id: 'maintenance',
     title: 'Maintenance',
-    titleAr: 'صيانات',
+    titleAr: 'صيانة',
     category: 'Support Services',
     categoryAr: 'خدمات الدعم',
     description: `  <p>

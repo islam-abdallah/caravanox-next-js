@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale = 'ar', navigation = {} }) => {
   const navLinks = [
     { href: `/${locale}`, label: navigation.home || "Home" },
     { href: `/${locale}/about`, label: navigation.about || "About" },
-    { href: `/${locale}/products`, label: navigation.services || "products" },
+    { href: `/${locale}/products`, label: navigation.services || "Products" },
     { href: `/${locale}/projects`, label: navigation.projects || "Projects" },
     { href: `/${locale}/blog`, label: navigation.blog || "Blog" },
     { href: `/${locale}/contact`, label: navigation.contact || "Contact" },
