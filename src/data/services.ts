@@ -209,7 +209,7 @@ export const services = {
       "تصنيع مسبق يوفر الوقت والتكلفة",
       "هيكل فولاذي مقاوم للعوامل الجوية",
       "تصميم داخلي مرن حسب الاستخدام"],
-    image: '/images/services/storage-solution/equipped-containers/1.webp',
+    image: '/images/services/storage-solution/equipped-containers/1.jpg',
     gallery: [
       '/images/services/storage-solution/equipped-containers/2.jpg',
       '/images/services/storage-solution/equipped-containers/3.jpg'
@@ -235,7 +235,7 @@ export const services = {
       'تبريد ثابت يناسب أصعب الظروف',
       'مقاسات قياسية: 10، 20، و40 قدم'
     ],
-    image: '/images/services/storage-solution/refrigerated-containers/1.webp',
+    image: '/images/services/storage-solution/refrigerated-containers/1.jpg',
     gallery: [
       '/images/services/storage-solution/refrigerated-containers/2.jpg',
       '/images/services/storage-solution/refrigerated-containers/3.jpg'
@@ -257,7 +257,7 @@ export const services = {
       "تصنيع فوري لتخزين فعال",
       "هياكل قوية مقاومة للصدأ",
       "تصميم مرن حسب الحاجة"],
-    image: '/images/services/storage-solution/storage-shelves/1.webp',
+    image: '/images/services/storage-solution/storage-shelves/1.jpg',
     gallery: [
       '/images/services/storage-solution/storage-shelves/2.jpg',
       // '/images/services/storage-solution/storage-shelves/3.jpg'
@@ -475,7 +475,7 @@ export const services = {
       "مرونة وتخصيص: خدماتنا مصممة لتلبية احتياجات مشروعك الخاصة، مما يضمن أفضل الحلول.",
       "خبرة احترافية: فريقنا المتخصص يضمن أعلى المعايير وأفضل الحلول لجميع احتياجاتك."
     ],
-    image: '/images/services/support-services/disassembly-assembly/1.webp',
+    image: '/images/services/support-services/disassembly-assembly/1.jpg',
     gallery: [
       '/images/services/support-services/disassembly-assembly/2.jpg',
       '/images/services/support-services/disassembly-assembly/3.jpg'
@@ -530,7 +530,7 @@ export const services = {
       "عقود صيانة دورية حسب احتياجك",
       "تقارير مفصلة بعد كل زيارة",
       "فريق فني محترف ومدرّب"],
-    image: '/images/services/support-services/maintenance/1.webp',
+    image: '/images/services/support-services/maintenance/1.jpg',
     gallery: [
       '/images/services/support-services/maintenance/2.jpg',
       '/images/services/support-services/maintenance/3.jpg'
@@ -586,7 +586,7 @@ export const services = {
       "فرق مدربة على الرفع والتثبيت الآمن",
       "تخطيط مسبق لمسارات النقل والتسليم",
       "مرونة في المواعيد وخدمة على مدار الساعة"],
-    image: '/images/services/support-services/transportation/1.webp',
+    image: '/images/services/support-services/transportation/1.jpg',
     gallery: [
       '/images/services/support-services/transportation/2.jpg',
       '/images/services/support-services/transportation/3.jpg',
