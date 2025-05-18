@@ -229,7 +229,7 @@ const ServiceDetailsPage: React.FC<ServiceDetailsPageProps> = ({ locale = 'ar', 
                     }
                     to="/projects"
                     params={{ catId: service.id }}
-                    locale={locale as "en" | "ar"}
+                    locale={locale}
                     primary={false}
                   />
                 </div>
